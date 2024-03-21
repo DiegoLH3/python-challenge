@@ -2,7 +2,7 @@
 import csv
 import os
 
-election_data_path = os.path.join('/Users/diego/Desktop/python_challenge/python-challenge/python-challenge-1/PyPoll/Resources/election_data.csv')
+election_data_path = os.path.join('/Users/diego/Desktop/python-challenge/PyPoll/Resources/election_data.csv')
 
 with open(election_data_path, 'r') as csvfile:
 
@@ -32,9 +32,9 @@ tot_votes = len(candidates)
 # Here we create a dict(dictionary) and inside the dict is the name
 # of the can(candidate) along with their votes.
 can_votes = {
-    "can_1": 'can_1_vote',
-    "can_2": 'can_2_vote',
-    "can_3": 'can_3_vote'
+    "can_1": can_1_vote,
+    "can_2": can_2_vote,
+    "can_3": can_3_vote
 }
 
 # Percentage of votes each can(candidate) won. 
