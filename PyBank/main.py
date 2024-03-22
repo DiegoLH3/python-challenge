@@ -21,7 +21,7 @@ with open(budget_data_path, 'r') as csvfile:
 # Creating a list for the Profit/Losses column
 prof_loss = [int(value) for value in Profit_Losses]
 
-
+# Total Months
 tot_months = len(Date)
 
 # We are adding up all the "Profit/Losses" column to get our total

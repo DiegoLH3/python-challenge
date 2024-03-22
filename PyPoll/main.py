@@ -38,7 +38,7 @@ can_votes = {can_1: [can_1_vote],
 
 # Percentage of votes each can(candidate) won. 
 # Formula is simple: we get the votes from each can(candidate)
-# from the can_votes_summary above, then divide their individual
+# from the can_votes above, then divide their individual
 # votes by the total amount of votes and multpily by 100.
 can_1_perc = (can_1_vote / tot_votes) * 100
 can_2_perc = (can_2_vote / tot_votes) * 100
