@@ -31,20 +31,18 @@ tot_votes = len(candidates)
 
 # Here we create a dict(dictionary) and inside the dict is the name
 # of the can(candidate) along with their votes.
-can_votes = {
-    "can_1": can_1_vote,
-    "can_2": can_2_vote,
-    "can_3": can_3_vote
-}
+can_votes = {can_1: [can_1_vote],
+             can_2: [can_2_vote],
+             can_3: [can_3_vote]
+             }
 
 # Percentage of votes each can(candidate) won. 
 # Formula is simple: we get the votes from each can(candidate)
 # from the can_votes_summary above, then divide their individual
 # votes by the total amount of votes and multpily by 100.
-can_1_perc = round(can_votes[can_1] / tot_votes * 100, 3)
-can_2_perc = round(can_votes[can_2] / tot_votes * 100, 3)
-can_3_perc = round(can_votes[can_3] / tot_votes * 100, 3)
-
+can_1_perc = (can_1_vote / tot_votes) * 100
+can_2_perc = (can_2_vote / tot_votes) * 100
+can_3_perc = (can_3_vote / tot_votes) * 100
 # Time to reveal the the winner of the election
 winner = max(can_votes, key= can_votes.get)
 
@@ -60,8 +58,9 @@ print_results = (
     "-------------------------\n"
     f"Winner: {winner}\n"
 )
+print(print_results)
 # Text file
-with open('/Users/diego/Desktop/python_challenge/python-challenge/python-challenge-1/PyPoll/Analysis/Results', 'w') as elec_res:
+with open('/Users/diego/Desktop/python-challenge/PyPoll/Analysis/Results', 'w') as elec_res:
     elec_res.write("Election Results\n")
     elec_res.write("------------------------\n")
     elec_res.write(f"Total Votes: {tot_votes}\n")

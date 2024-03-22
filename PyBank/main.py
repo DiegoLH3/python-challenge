@@ -64,7 +64,7 @@ print(print_results)
        
 
 # Writes results to Text File
-with open('/Users/diego/Desktop/python_challenge/python-challenge/python-challenge-1/PyBank/Analysis/Results', 'w') as fin_anal:
+with open('/Users/diego/Desktop/python-challenge/PyBank/Analysis/Results', 'w') as fin_anal:
     fin_anal.write("Financial Analysis Results\n")
     fin_anal.write("--------------------\n")
     fin_anal.write(f"Total Months: {tot_months}\n")
